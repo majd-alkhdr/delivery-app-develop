@@ -1,0 +1,1 @@
+Always read CONTEXT.md in the project root before any task. Strictly follow SOLID principles, Thin Controllers, FormRequests, and dedicated Services/Actions. Never ignore errors or data discrepancies silently; always surface clear Arabic explanations/warnings. Do not modify existing completed phases (PHASE_1 through PHASE_8D) unless explicitly instructed.

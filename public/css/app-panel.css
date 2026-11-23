@@ -1,0 +1,562 @@
+/* =====================================================================
+   تطبيق الموزعين - مستودع نيو هبة
+   ملف التصميم الموحد: الخط، متغيرات الألوان، والقواعد المشتركة.
+   يُحمَّل بعد Bootstrap 5.3 RTL.
+   ===================================================================== */
+
+/* ---------- الخط العربي (محلي) ---------- */
+@font-face {
+    font-family: 'Tajawal';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../vendor/fonts/tajawal/tajawal-arabic-400-normal.woff2') format('woff2');
+    unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
+@font-face {
+    font-family: 'Tajawal';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../vendor/fonts/tajawal/tajawal-arabic-500-normal.woff2') format('woff2');
+    unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
+@font-face {
+    font-family: 'Tajawal';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../vendor/fonts/tajawal/tajawal-arabic-700-normal.woff2') format('woff2');
+    unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
+@font-face {
+    font-family: 'Tajawal';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('../vendor/fonts/tajawal/tajawal-arabic-800-normal.woff2') format('woff2');
+    unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
+@font-face {
+    font-family: 'Tajawal';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../vendor/fonts/tajawal/tajawal-latin-400-normal.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'Tajawal';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../vendor/fonts/tajawal/tajawal-latin-500-normal.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'Tajawal';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../vendor/fonts/tajawal/tajawal-latin-700-normal.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'Tajawal';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('../vendor/fonts/tajawal/tajawal-latin-800-normal.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ---------- متغيرات التصميم ---------- */
+:root {
+    --app-font: 'Tajawal', 'Segoe UI', Tahoma, sans-serif;
+
+    --app-primary: #1d4ed8;
+    --app-primary-dark: #1e3a8a;
+    --app-primary-soft: #dbeafe;
+    --app-success: #15803d;
+    --app-success-soft: #dcfce7;
+    --app-warning: #b45309;
+    --app-warning-soft: #fef3c7;
+    --app-danger: #b91c1c;
+    --app-danger-soft: #fee2e2;
+    --app-muted: #64748b;
+    --app-pattern-m: #6f42c1;
+
+    --app-bg: #f1f5f9;
+    --app-surface: #ffffff;
+    --app-border: #e2e8f0;
+    --app-text: #0f172a;
+    --app-navbar-bg: #0f172a;
+    --app-navbar-text: #f8fafc;
+
+    --app-radius: 12px;
+    --app-radius-sm: 8px;
+    --app-shadow: 0 1px 2px rgba(15, 23, 42, .06), 0 1px 3px rgba(15, 23, 42, .08);
+    --app-touch: 44px;
+
+    /* ربط متغيرات Bootstrap بالخط واللون الأساسي */
+    --bs-body-font-family: var(--app-font);
+    --bs-body-bg: var(--app-bg);
+    --bs-body-color: var(--app-text);
+    --bs-primary: var(--app-primary);
+    --bs-primary-rgb: 29, 78, 216;
+    --bs-link-color: var(--app-primary);
+    --bs-link-color-rgb: 29, 78, 216;
+}
+
+/* ---------- الأساس ---------- */
+html, body {
+    overflow-x: clip; /* لا تمرير أفقي للصفحة */
+}
+
+body {
+    font-family: var(--app-font);
+    background-color: var(--app-bg);
+    color: var(--app-text);
+}
+
+.font-monospace {
+    font-family: var(--app-font) !important;
+    font-variant-numeric: tabular-nums;
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--app-primary);
+    --bs-btn-border-color: var(--app-primary);
+    --bs-btn-hover-bg: var(--app-primary-dark);
+    --bs-btn-hover-border-color: var(--app-primary-dark);
+    --bs-btn-active-bg: var(--app-primary-dark);
+    --bs-btn-active-border-color: var(--app-primary-dark);
+    --bs-btn-disabled-bg: var(--app-primary);
+    --bs-btn-disabled-border-color: var(--app-primary);
+}
+
+.card {
+    border: 0;
+    border-radius: var(--app-radius);
+    box-shadow: var(--app-shadow);
+}
+
+/* ---------- أدوات مساعدة غير موجودة في Bootstrap ---------- */
+.fs-7 { font-size: .85rem !important; }
+.fs-8 { font-size: .75rem !important; }
+.min-w-0 { min-width: 0 !important; }
+.text-break-word { word-break: break-word; overflow-wrap: anywhere; }
+/* المرحلة 6B: قصّ النص بسطرين (بيان الفاتورة) */
+.text-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+/* جدول الأسطر: عمود الحسم ضيق لا يكسر العرض على الجوال (360px) */
+.invoice-lines-table .discount-col { white-space: nowrap; padding-left: .25rem; padding-right: .25rem; }
+.bg-pattern-m { background-color: var(--app-pattern-m) !important; color: #fff !important; }
+
+/* ---------- الشريط العلوي ---------- */
+.app-navbar {
+    background-color: var(--app-navbar-bg);
+    color: var(--app-navbar-text);
+}
+
+.app-navbar .navbar-brand {
+    color: var(--app-navbar-text);
+    min-width: 0;
+}
+
+.app-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--app-radius-sm);
+    background: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+    color: var(--app-primary);
+}
+
+.app-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.app-navbar .nav-link {
+    color: rgba(248, 250, 252, .75);
+    border-radius: var(--app-radius-sm);
+    padding-inline: .75rem;
+    min-height: var(--app-touch);
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+.app-navbar .nav-link:hover,
+.app-navbar .nav-link.active {
+    color: #fff;
+    background-color: rgba(255, 255, 255, .1);
+}
+
+@media (max-width: 991.98px) {
+    .app-navbar-user {
+        border-top: 1px solid rgba(255, 255, 255, .15);
+        margin-top: .5rem;
+    }
+}
+
+.app-user-chip {
+    font-size: .85rem;
+    color: rgba(248, 250, 252, .85);
+}
+
+/* ---------- القائمة الجانبية (الأدوار الإدارية) ---------- */
+:root {
+    --app-sidebar-width: 260px;
+    --app-sidebar-collapsed: 72px;
+    --app-sidebar-accent: #60a5fa;
+}
+
+.app-sidebar {
+    --bs-offcanvas-bg: var(--app-navbar-bg);
+    --bs-offcanvas-color: var(--app-navbar-text);
+    background-color: var(--app-navbar-bg);
+    color: var(--app-navbar-text);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Bootstrap يجعل خلفية offcanvas-lg شفافة على الشاشات الكبيرة؛ نبقيها بلون الشريط */
+.app-sidebar.offcanvas-lg {
+    background-color: var(--app-navbar-bg) !important;
+}
+
+.app-sidebar-brand {
+    padding: .85rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    min-height: 64px;
+}
+
+.app-sidebar-brand a {
+    color: var(--app-navbar-text);
+}
+
+.app-sidebar-toggle {
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: var(--app-radius-sm);
+    background: rgba(255, 255, 255, .08);
+    color: var(--app-navbar-text);
+}
+
+.app-sidebar-toggle:hover,
+.app-sidebar-toggle:focus-visible {
+    background: rgba(255, 255, 255, .18);
+}
+
+.app-sidebar-nav {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    padding: .5rem .6rem;
+}
+
+.app-sidebar-group + .app-sidebar-group {
+    margin-top: .75rem;
+}
+
+.app-sidebar-heading {
+    font-size: .75rem;
+    color: #94a3b8;
+    padding: .35rem .65rem;
+    white-space: nowrap;
+}
+
+.app-sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    min-height: 42px;
+    padding: .45rem .65rem;
+    border-radius: var(--app-radius-sm);
+    border-inline-start: 4px solid transparent;
+    color: rgba(248, 250, 252, .8);
+    text-decoration: none;
+    font-size: .925rem;
+    text-align: start;
+}
+
+.app-sidebar-link:hover,
+.app-sidebar-link:focus-visible {
+    color: #fff;
+    background-color: rgba(255, 255, 255, .08);
+    outline: none;
+}
+
+.app-sidebar-link:focus-visible {
+    box-shadow: 0 0 0 2px var(--app-sidebar-accent);
+}
+
+/* العنصر النشط: خلفية أفتح + شريط جانبي ملوّن + خط أعرض (لا يعتمد على اللون وحده) */
+.app-sidebar-link.active {
+    color: #fff;
+    font-weight: 700;
+    background-color: rgba(255, 255, 255, .14);
+    border-inline-start-color: var(--app-sidebar-accent);
+}
+
+.app-sidebar-badge {
+    margin-inline-start: auto;
+    background-color: #f59e0b;
+    color: #111827;
+    font-size: .72rem;
+}
+
+.app-sidebar-user {
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    padding: .75rem .6rem 1rem;
+    font-size: .875rem;
+}
+
+.app-sidebar-user .app-sidebar-link {
+    min-height: 40px;
+}
+
+.app-topbar {
+    background-color: var(--app-navbar-bg);
+    color: var(--app-navbar-text);
+    min-height: 56px;
+    z-index: 1030;
+}
+
+.app-topbar .app-logo {
+    width: 34px;
+    height: 34px;
+}
+
+/* الجوال والتابلت: offcanvas يأخذ عرض القائمة */
+@media (max-width: 991.98px) {
+    .app-sidebar.offcanvas-lg {
+        width: min(var(--app-sidebar-width), 85vw);
+    }
+}
+
+/* الشاشات الكبيرة: قائمة ثابتة على اليمين، والمحتوى بجانبها */
+@media (min-width: 992px) {
+    .app-sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: var(--app-sidebar-width);
+        z-index: 1030;
+        transition: width .15s ease;
+    }
+
+    .has-sidebar .app-main {
+        margin-right: var(--app-sidebar-width);
+        width: auto;
+        transition: margin .15s ease;
+    }
+
+    /* الطيّ: شريط أيقونات */
+    .sidebar-collapsed .app-sidebar {
+        width: var(--app-sidebar-collapsed);
+    }
+
+    .sidebar-collapsed .has-sidebar .app-main {
+        margin-right: var(--app-sidebar-collapsed);
+    }
+
+    .sidebar-collapsed .app-sidebar-text,
+    .sidebar-collapsed .app-sidebar-heading,
+    .sidebar-collapsed .app-sidebar-badge {
+        display: none !important;
+    }
+
+    .sidebar-collapsed .app-sidebar-group + .app-sidebar-group {
+        border-top: 1px solid rgba(255, 255, 255, .1);
+        padding-top: .5rem;
+    }
+
+    .sidebar-collapsed .app-sidebar-brand {
+        flex-direction: column;
+        padding-inline: .5rem;
+    }
+
+    .sidebar-collapsed .app-sidebar-brand .app-sidebar-toggle {
+        margin: .5rem 0 0 !important;
+    }
+
+    .sidebar-collapsed .app-sidebar-toggle i {
+        transform: rotate(180deg);
+    }
+
+    .sidebar-collapsed .app-sidebar-link {
+        justify-content: center;
+        padding-inline: 0;
+    }
+
+    .sidebar-collapsed .app-sidebar-user > div {
+        justify-content: center;
+    }
+}
+
+/* الطباعة: لا قائمة ولا أشرطة، والمحتوى بعرض الصفحة */
+@media print {
+    .app-sidebar,
+    .app-topbar,
+    .app-navbar,
+    .offcanvas-backdrop {
+        display: none !important;
+    }
+
+    .has-sidebar .app-main,
+    .app-main {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: none !important;
+    }
+}
+
+/* ---------- بطاقات الإحصائيات ---------- */
+.stat-card {
+    border-radius: var(--app-radius);
+    height: 100%;
+    text-align: center;
+}
+
+.stat-card .stat-label {
+    font-size: .75rem;
+    opacity: .85;
+    display: block;
+    margin-bottom: .25rem;
+}
+
+.stat-card .stat-value {
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0;
+    font-variant-numeric: tabular-nums;
+    overflow-wrap: anywhere;
+}
+
+/* ---------- بطاقة الصيدلية ---------- */
+.customer-card {
+    border-inline-start: 6px solid var(--app-primary);
+    border-radius: var(--app-radius);
+    overflow: hidden;
+    transition: box-shadow .2s ease;
+}
+
+.customer-card.all-paid {
+    border-inline-start-color: var(--app-success);
+    background-color: #f8fff9;
+}
+
+/* ---------- كروت الكشوفات (الموزع) ---------- */
+.sheet-card {
+    border-inline-start: 4px solid var(--app-border);
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.sheet-card.status-pending { border-inline-start-color: var(--app-muted); }
+.sheet-card.status-in_progress { border-inline-start-color: var(--app-primary); }
+.sheet-card.status-completed { border-inline-start-color: var(--app-success); }
+
+.sheet-card:active { transform: scale(.98); }
+
+@media (min-width: 768px) {
+    .sheet-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .08);
+    }
+}
+
+.chip-scroller {
+    display: flex;
+    gap: .5rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-bottom: .25rem;
+}
+
+.chip-scroller::-webkit-scrollbar { display: none; }
+
+.chip-scroller .btn {
+    flex-shrink: 0;
+    border-radius: 999px;
+    font-weight: 700;
+}
+
+/* ---------- شارة التذكير بختم الإيصال ---------- */
+.stamp-reminder {
+    background-color: var(--app-warning-soft);
+    color: var(--app-warning);
+    border: 1px solid rgba(180, 83, 9, .25);
+    font-weight: 700;
+}
+
+/* ---------- الموبايل أولاً: أهداف لمس لا تقل عن 44px ---------- */
+.touch-ui .btn,
+.touch-ui .form-control,
+.touch-ui .form-select,
+.touch-ui .input-group-text {
+    min-height: var(--app-touch);
+}
+
+.touch-ui .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .35rem;
+}
+
+.touch-ui textarea.form-control { min-height: calc(var(--app-touch) * 2); }
+
+.touch-ui .btn-close {
+    width: var(--app-touch);
+    height: var(--app-touch);
+    padding: 0;
+    min-height: 0;
+}
+
+/* شاشات الإدارة: أزرار الجداول الصغيرة مريحة أيضاً على اللمس */
+.table .btn-sm {
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+    gap: .25rem;
+}
+
+/* ---------- الجداول ---------- */
+.table > thead th {
+    font-size: .8rem;
+    color: var(--app-muted);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* ---------- صفحة الدخول ---------- */
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 440px;
+}
+
+.auth-card .app-logo {
+    width: 88px;
+    height: 88px;
+    font-size: 2.25rem;
+    box-shadow: var(--app-shadow);
+}
